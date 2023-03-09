@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>QPBL API :: QENTA Online Guides</title>
+    <link rel="canonical" href="https://guides.qenta.com/online-guides/main/API/paybylinkAPI/">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="/_/css/site.css">
+<link rel="stylesheet" href="/_/css/search.css">
+<link rel="stylesheet" href="/_/css/qenta.css">
+<link rel="stylesheet" href="https://use.typekit.net/ucf2gvc.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/_/css/nav-menu.css">
+<link rel="stylesheet" href="/_/css/tables.css">
+<link rel="stylesheet" href="/_/css/tabs.css">    <script>var uiRootPath = '../../../../_'</script>
+    <link rel="icon" href="/_/img/Favicon-QENTA-RGB.png" type="image/png">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://guides.qenta.com">QENTA Online Guides</a>
+        <div class="navbar-item search-item">
+          <input id="search-input" type="text" placeholder="Search">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://guides.qenta.com/">Home</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/">Enterprise</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/haendler-login/">Merchant Login</a>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://guides.qenta.com/contact/">Contact</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="online-guides" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../">QENTA Online Guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Hosted Solutions</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../hosted/page/">QPAY Checkout Page</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../hosted/page/quick-guide-for-developers/">Quick Guide For Developers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../hosted/page/integration-quide/">Integration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../hosted/page/customization/">Customization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../hosted/seamless/">QMORE Checkout Seamless</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../hosted/seamless/pci-dss-saq-a/">PCI DSS SAQ A</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../hosted/seamless/data-storage/">Data Storage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../hosted/seamless/seamless-payment-process/">Seamless Payment Process</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../hosted/seamless/customization/">Customization</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Web-Based Solutions</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../web-based/terminal/">QCALL Checkout Terminal</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../web-based/automated/">QFILE Checkout Automated</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../web-based/paybylink/">QPBL PayByLink</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../web-based/payment-center/">QPC Payment Center</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../web-based/journal /">QENTA Checkout Journal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">API Solutions</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="./">QPBL PayByLink API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://qtill.guides.qenta.com/">QTILL Checkout Enterprise</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../securing-online-shop/">Securing the Online Shop</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Parameters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frontend Parameters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../parameters/frontend/request-parameters/">Request</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../parameters/frontend/required-parameters/">Required</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../parameters/frontend/optional-parameters/">Optional</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../parameters/frontend/response-parameters/">Response</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../parameters/datastorage/">Data Storage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Backend Parameters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../parameters/backend/request-parameters/">Request</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../parameters/backend/required-parameters/">Required</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../parameters/backend/optional-parameters/">Optional</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../parameters/backend/response-parameters/">Response</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../parameters/detailed-description/">Detailed Description</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../parameters/error-codes/">Error Codes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../demotest/">Demo/Test</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../demotest/demo/">Demo</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../demotest/test/">Test</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../backend-operations/">Backend Operations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../backend-operations/backend/#transactionBasedOperations">Transaction-based</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../backend-operations/available-transaction-based-operations/">Available Operations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../backend-operations/by-payment-method/">Operations Payment Method</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../backend-operations/backend/#nonTransactionBasedOperations">Non-transaction-based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../plugins/">Shop Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../payment-methods/">Payment Methods</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/circlek/">Circle K</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../payment-methods/credit-card/">Credit Card</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../payment-methods/3DS/">3D Secure/Recurring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../payment-methods/credit-card-mail-order/">Mail Order and Telephone Order</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/cvs/">CVS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/dollar-general/">Dollar General</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/eps-giropay/">EPS/Giropay</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/obucks/">oBucks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/payolution/">Payolution</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../payment-methods/paypal/">PayPal</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../payment-methods/setup-3rdparty-permission/">3rd Party Permissions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/paypal-new/">PayPal (beta)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/paysafecard/">Paysafecard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/pagoefectivo/">PagoEfectivo</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/p24/">P24</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/riverty/">Riverty</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/safetypay/">Safetypay</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../payment-methods/sepa/">SEPA</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../payment-methods/sofort/">Sofort.</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../payment-methods/registering-sofort/">Registering and setting up</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../logos/">Logos</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../glossary/">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../certificates/">Certificates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../contact/">Contact</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">QENTA Online Guides</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../">QENTA Online Guides</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../">QENTA Online Guides</a></li>
+    <li>API Solutions</li>
+    <li><a href="./">QPBL PayByLink API</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">QPBL API</h1>
+<div class="sect1">
+<h2 id="paybylinkAPI"><a class="anchor" href="#paybylinkAPI"></a>QPBL API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>test change</p>
+</div>
+<div class="paragraph">
+<p>QENTA PayByLink API documentation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="linkCreation"><a class="anchor" href="#linkCreation"></a>Link Creation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The link can be controlled based on the request field and what customer see in the checkout can be adjusted.</p>
+</div>
+<div class="paragraph">
+<p>There are two types of links that provide different checkout options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#createSimpleLink">Create a simple link</a> - the link is used when the merchant doesn&#8217;t have a basket and doesn&#8217;t need customer-specific shipping and billing data (except consumer e-mail) e.g. donations or membership fees for already existing customers.</p>
+</li>
+<li>
+<p><a href="#createComplexLink">Create a complex link</a> - the link is used if the merchant wants to provide and receive basket, shipping, and billing data from their customers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph credential-header">
+<p><strong>Credentials</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Basic-Auth (Test)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credentials that <a href="../../contact/" class="page" target="\"_blank\"">integration specialist</a> team provides.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Secret Key (Test)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provided by the <a href="../../contact/" class="page" target="\"_blank\"">integration specialist</a> team.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base-URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>https://api.qenta.com/link</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph request-headers">
+<p><strong>Request Headers</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content-Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>application/json</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authorization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Basic &lt;Base64 encoded username and password&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X-Signature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/HMAC" target="\"_blank\"">HMAC-SHA512</a> hashed request body with the cryptographic secret key.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="createSimpleLink"><a class="anchor" href="#createSimpleLink"></a>Create a Simple Link</h3>
+<div class="paragraph">
+<p>To receive a payment link or a QR code for the link send a <span class="endpoint-method-post">POST</span> request to the /links endpoint:</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links</code></p>
+</div>
+<div class="sect3">
+<h4 id="requestCreateSimpleLink"><a class="anchor" href="#requestCreateSimpleLink"></a>Request</h4>
+<div class="listingblock source_10">
+<div class="title">Initial Example Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-JSON hljs" data-lang="JSON">{
+    "title": "Link_Title",
+    "description": "Test:0000",
+    "amount": "1",
+    "currency": "EUR",
+    "orderReference": "1234512345",
+    "linkValidFrom": "2022-11-30T00:00:00.000+00:00",
+    "linkValidTo": "2023-12-02T00:00:00.000+00:00",
+    "displayBasketData": false,
+    "displayBillingData": false,
+    "displayShippingData": false,
+    "enabled": true,
+    "paymentType": "SELECT",
+    "cancelUrl": "https://payments.qenta.com/cancel/",
+    "confirmUrl": "https://yourconfirm.com",
+    "serviceUrl": "https://yourimprint.com",
+    "merchantLogoUrl": "",
+    "successUrl": "https://payments.qenta.com/success/",
+    "failureUrl": "https://payments.qenta.com/failure/",
+    "customer": {
+        "firstName": "",
+        "lastName": "",
+        "phone": "",
+        "email": "",
+        "address": {
+            "street": "",
+            "city": "",
+            "zipCode": "",
+            "country": "",
+            "countryState" : ""
+        }
+    },
+    "basket": {
+        "basketItems": []
+    }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Detailed description of parameters can be checked <a href="#requestParameters">here</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="responseCreateSimpleLink"><a class="anchor" href="#responseCreateSimpleLink"></a>Response</h4>
+<div class="paragraph">
+<p>The payment link and QR code will be received in the response.</p>
+</div>
+<div class="listingblock source_10">
+<div class="title">Initial Example Response</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-JSON hljs" data-lang="JSON">{
+    "id": "0975b0f3-34e1-49b1-8786-943d1a874684",
+    "title": "Link_Title",
+    "description": "Test:0000",
+    "expirationStatus": "Valid",
+    "lastAccess": "2022-11-30T11:45:39.851",
+    "lastPayment": "2022-11-30T11:45:39.849",
+    "paymentStatus": "Paid",
+    "amount": 55.00,
+    "sales": 110.00,
+    "orderQuantity": 2,
+    "clicks": 2,
+    "createdAt": "2022-11-30T10:43:39.446+00:00",
+    "orderReference": "1234512345",
+    "linkValidFrom": "2022-11-30T00:00:00.000+00:00",
+    "linkValidTo": "2022-12-02T00:00:00.000+00:00",
+    "linkCallLimit": 5,
+    "maxRetries": 0,
+    "displayBasketData": true,
+    "displayShippingData": true,
+    "displayBillingData": true,
+    "paymentType": "SELECT",
+    "paymentTypes": "[CCARD]",
+    "currency": "EUR",
+        "customer": {
+            "firstName": "",
+            "lastName": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "zipCode": "",
+                "country": "",
+                "countryState": ""
+            },
+            "address2": null,
+            "email": "",
+            "phone": ""
+    },
+    "basket": {
+        "basketItems": [
+            {
+                "id": "b15826b3-8a2f-4d2a-9e7b-beea72b77bc6",
+                "name": "test product",
+                "articleNumber": "123",
+                "description": "test products",
+                "quantity": 1,
+                "unitGrossAmount": 55.00,
+                "unitTaxAmount": 5.00,
+                "unitTaxRate": 10.000,
+                "unitNetAmount": 50.00
+            }
+        ]
+    },
+    "cancelUrl": "https://payments.qenta.com/cancel/",
+    "confirmUrl": "https://yourconfirm.com",
+    "serviceUrl": "https://yourimprint.com",
+    "merchantLogoUrl": "",
+    "successUrl": "https://payments.qenta.com/success/",
+    "failureUrl": "https://payments.qenta.com/failure/",
+    "merchantConfigId": "7a4ba290-f59a-4bed-8cbe-da89004c9a10",
+    "enabled": true,
+    "expired": false,
+    "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAABw0lEQVR4Xu2YW2rDQAxFBbOALGm2PkvKAgZUnSvTOC6kv7lgMSm2dPIhrh6TRn62FVfPxW6g7QbabqBNwIqyxxq56nlwcuPqmA1Qn/2oswrL5+zX9hsBlVR5yJRoZT0P2BDYMUugUmo8wxdIqSNmOQKpGqvsogsPsQ6/EVCpVVL7fHB1zAVoo2t6fOXz5LUBljolK1oTjErTa57EcgBqfBGqBIusaJUcX4lpBaxjfMkZNI7qTZL5ADR+K0WOTIBWjZAREIzixewiu6n2B/YC1CY0PnppxWvLYz7AOvwwtEy5dHU0A7q6xq9M5ZF8VgBJhTRiOSp0DDQrgFcGMqopWTxvjeMAwOiiRe0FJym5ZQV0djjpF6WpJlLMB9i65Wr8sh9bpjYjgDRpf5INFj3bZGgaGwGbm4mGmDqoH06N4wLg34wvBlr9ZdG/rigewFCl9RKh8ModFzW/H2gj1M7UBBNpBJAUJce9kXyHbiynS68HkFooKMUvwdlpxp9/knw5oJZBndBO3KQdIv2AfmilEO59PpgAqRzpHUYZvwqXF5CUHJ2iOVwnjy1vBVBh6hrEKgeXxpkyH+CT3UDbDbTdQNv/wA93mo6KvAmiEQAAAABJRU5ErkJggg==",
+    "linkUrl": "https://api.qenta.com/link/pbl/checkout/0975b0f3-34e1-49b1-8786-943d1a874684"
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Detailed description of parameters can be checked <a href="#responseParameters">here</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="createComplexLink"><a class="anchor" href="#createComplexLink"></a>Create a Complex Link</h3>
+<div class="sect3">
+<h4 id="requestCreateComplexLink"><a class="anchor" href="#requestCreateComplexLink"></a>Request</h4>
+<div class="listingblock source_10">
+<div class="title">Initial Example Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-JSON hljs" data-lang="JSON">{
+    "title": "Link_Title",
+    "description": "Test:0000",
+    "currency": "EUR",
+    "orderReference": "1234512345",
+    "linkValidFrom": "2022-11-30T00:00:00.000+00:00",
+    "linkValidTo": "2022-12-02T00:00:00.000+00:00",
+    "linkCallLimit": "5",
+    "displayBasketData": true,
+    "displayBillingData": true,
+    "displayShippingData": true,
+    "enabled": true,
+    "paymentType": "SELECT",
+    "cancelUrl": "https://payments.qenta.com/cancel/",
+    "confirmUrl": "https://yourconfirm.com",
+    "serviceUrl": "https://yourimprint.com",
+    "merchantLogoUrl": "",
+    "successUrl": "https://payments.qenta.com/success/",
+    "failureUrl": "https://payments.qenta.com/failure/",
+    "customer": {
+        "firstName": "",
+        "lastName": "",
+        "phone": "",
+        "email": "",
+        "address": {
+            "street": "",
+            "city": "",
+            "zipCode": "",
+            "country": "",
+            "countryState": ""
+        },
+        "requireCustomerBillingInfo": false,
+        "requireCustomerShippingInfo": false
+    },
+    "basket": {
+        "basketItems": [            {
+        "articleNumber": "123",
+        "description": "test products",
+        "name": "test product",
+        "quantity": 1,
+        "unitGrossAmount": 55,
+        "unitNetAmount": 50,
+        "unitTaxAmount": 5,
+        "unitTaxRate": 10
+            }
+        ]
+    }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Detailed description of parameters can be checked <a href="#requestParameters">here</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="responseCreateComplexLink"><a class="anchor" href="#responseCreateComplexLink"></a>Response</h4>
+<div class="paragraph">
+<p>The payment link and QR code will be received in the response.</p>
+</div>
+<div class="listingblock source_10">
+<div class="title">Initial Example Response</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-JSON hljs" data-lang="JSON">{
+    "id": "0975b0f3-34e1-49b1-8786-943d1a874684",
+    "title": "Link_Title",
+    "description": "Test:0000",
+    "expirationStatus": "Valid",
+    "paymentStatus": "Not paid",
+    "amount": 55.00,
+    "sales": 0,
+    "orderQuantity": 0,
+    "clicks": 0,
+    "createdAt": "2022-11-30T10:43:39.446+00:00",
+    "orderReference": "1234512345",
+    "linkValidFrom": "2022-11-30T00:00:00.000+00:00",
+    "linkValidTo": "2022-12-02T00:00:00.000+00:00",
+    "linkCallLimit": 5,
+    "maxRetries": 0,
+    "displayBasketData": true,
+    "displayShippingData": true,
+    "displayBillingData": true,
+    "paymentType": "SELECT",
+    "paymentTypes": "No payments",
+    "currency": "EUR",
+    "customer": {
+        "firstName": "",
+        "lastName": "",
+        "address": {
+            "street": "",
+            "city": "",
+            "zipCode": "",
+            "country": "",
+            "countryState": ""
+        },
+        "address2": null,
+        "email": "",
+        "phone": ""
+    },
+    "basket": {
+        "basketItems": [
+            {
+                "id": "b15826b3-8a2f-4d2a-9e7b-beea72b77bc6",
+                "name": "test product",
+                "articleNumber": "123",
+                "description": "test products",
+                "quantity": 1,
+                "unitGrossAmount": 55.00,
+                "unitTaxAmount": 5.00,
+                "unitTaxRate": 10,
+                "unitNetAmount": 50
+            }
+        ]
+    },
+    "cancelUrl": "https://payments.qenta.com/cancel/",
+    "confirmUrl": "https://yourconfirm.com",
+    "serviceUrl": "https://yourimprint.com",
+    "merchantLogoUrl": "",
+    "successUrl": "https://payments.qenta.com/success/",
+    "failureUrl": "https://payments.qenta.com/failure/",
+    "merchantConfigId": "7a4ba290-f59a-4bed-8cbe-da89004c9a10",
+    "enabled": true,
+    "expired": false,
+    "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAABw0lEQVR4Xu2YW2rDQAxFBbOALGm2PkvKAgZUnSvTOC6kv7lgMSm2dPIhrh6TRn62FVfPxW6g7QbabqBNwIqyxxq56nlwcuPqmA1Qn/2oswrL5+zX9hsBlVR5yJRoZT0P2BDYMUugUmo8wxdIqSNmOQKpGqvsogsPsQ6/EVCpVVL7fHB1zAVoo2t6fOXz5LUBljolK1oTjErTa57EcgBqfBGqBIusaJUcX4lpBaxjfMkZNI7qTZL5ADR+K0WOTIBWjZAREIzixewiu6n2B/YC1CY0PnppxWvLYz7AOvwwtEy5dHU0A7q6xq9M5ZF8VgBJhTRiOSp0DDQrgFcGMqopWTxvjeMAwOiiRe0FJym5ZQV0djjpF6WpJlLMB9i65Wr8sh9bpjYjgDRpf5INFj3bZGgaGwGbm4mGmDqoH06N4wLg34wvBlr9ZdG/rigewFCl9RKh8ModFzW/H2gj1M7UBBNpBJAUJce9kXyHbiynS68HkFooKMUvwdlpxp9/knw5oJZBndBO3KQdIv2AfmilEO59PpgAqRzpHUYZvwqXF5CUHJ2iOVwnjy1vBVBh6hrEKgeXxpkyH+CT3UDbDbTdQNv/wA93mo6KvAmiEQAAAABJRU5ErkJggg==",
+    "linkUrl": "https://api.qenta.com/link/pbl/checkout/0975b0f3-34e1-49b1-8786-943d1a874684"
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Detailed description of parameters can be checked <a href="#responseParameters">here</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="gatherLinkInformation"><a class="anchor" href="#gatherLinkInformation"></a>Gather Link Information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are two ways for gathering information about created links and orders/payments:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#dataTransferObject">Data transfer object from link by ID</a> - general information from link</p>
+</li>
+<li>
+<p><a href="#ordersForLink">Orders for link</a> - information about every order and/or payment</p>
+</li>
+</ul>
+</div>
+<div class="paragraph credential-header">
+<p><strong>Credentials</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Basic-Auth (Test)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credentials that <a href="../../contact/" class="page" target="\"_blank\"">integration specialist</a> team provides.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base-URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>https://api.qenta.com/link</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph request-headers">
+<p><strong>Request Headers</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content-Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>application/json</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authorization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Basic &lt;Base64 encoded username and password&gt;</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="dataTransferObject"><a class="anchor" href="#dataTransferObject"></a>Data Transfer Object from Link by ID</h3>
+<div class="paragraph">
+<p>For more information about a link send a <span class="endpoint-method-get">GET</span> request to the base URL and include the link ID. ID was provided in the initial response for creating a link and the path for orders (/links/{id}):</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links/{id}</code></p>
+</div>
+<div class="listingblock source_10">
+<div class="title">Response Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-JSON hljs" data-lang="JSON">{
+    "id": "0975b0f3-34e1-49b1-8786-943d1a874684",
+    "title": "Link_Title",
+    "description": "Test:0000",
+    "expirationStatus": "Valid",
+    "lastAccess": "2022-11-30T11:45:39.851",
+    "lastPayment": "2022-11-30T11:45:39.849",
+    "paymentStatus": "Paid",
+    "amount": 55.00,
+    "sales": 110.00,
+    "orderQuantity": 2,
+    "clicks": 2,
+    "createdAt": "2022-11-30T10:43:39.446+00:00",
+    "orderReference": "1234512345",
+    "linkValidFrom": "2022-11-30T00:00:00.000+00:00",
+    "linkValidTo": "2022-12-02T00:00:00.000+00:00",
+    "linkCallLimit": 5,
+    "maxRetries": 0,
+    "displayBasketData": true,
+    "displayShippingData": true,
+    "displayBillingData": true,
+    "paymentType": "SELECT",
+    "paymentTypes": "[CCARD]",
+    "currency": "EUR",
+    "customer": {
+        "firstName": "",
+        "lastName": "",
+        "address": {
+            "street": "",
+            "city": "",
+            "zipCode": "",
+            "country": "",
+            "countryState": ""
+        },
+        "address2": null,
+        "email": "",
+        "phone": ""
+    },
+    "basket": {
+        "basketItems": [
+            {
+                "id": "b15826b3-8a2f-4d2a-9e7b-beea72b77bc6",
+                "name": "test product",
+                "articleNumber": "123",
+                "description": "test products",
+                "quantity": 1,
+                "unitGrossAmount": 55.00,
+                "unitTaxAmount": 5.00,
+                "unitTaxRate": 10.000,
+                "unitNetAmount": 50.00
+            }
+        ]
+    },
+    "cancelUrl": "https://payments.qenta.com/cancel/",
+    "confirmUrl": "https://yourconfirm.com",
+    "serviceUrl": "https://yourimprint.com",
+    "merchantLogoUrl": "",
+    "successUrl": "https://payments.qenta.com/success/",
+    "failureUrl": "https://payments.qenta.com/failure/",
+    "merchantConfigId": "7a4ba290-f59a-4bed-8cbe-da89004c9a10",
+    "enabled": true,
+    "expired": false,
+    "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAABw0lEQVR4Xu2YW2rDQAxFBbOALGm2PkvKAgZUnSvTOC6kv7lgMSm2dPIhrh6TRn62FVfPxW6g7QbabqBNwIqyxxq56nlwcuPqmA1Qn/2oswrL5+zX9hsBlVR5yJRoZT0P2BDYMUugUmo8wxdIqSNmOQKpGqvsogsPsQ6/EVCpVVL7fHB1zAVoo2t6fOXz5LUBljolK1oTjErTa57EcgBqfBGqBIusaJUcX4lpBaxjfMkZNI7qTZL5ADR+K0WOTIBWjZAREIzixewiu6n2B/YC1CY0PnppxWvLYz7AOvwwtEy5dHU0A7q6xq9M5ZF8VgBJhTRiOSp0DDQrgFcGMqopWTxvjeMAwOiiRe0FJym5ZQV0djjpF6WpJlLMB9i65Wr8sh9bpjYjgDRpf5INFj3bZGgaGwGbm4mGmDqoH06N4wLg34wvBlr9ZdG/rigewFCl9RKh8ModFzW/H2gj1M7UBBNpBJAUJce9kXyHbiynS68HkFooKMUvwdlpxp9/knw5oJZBndBO3KQdIv2AfmilEO59PpgAqRzpHUYZvwqXF5CUHJ2iOVwnjy1vBVBh6hrEKgeXxpkyH+CT3UDbDbTdQNv/wA93mo6KvAmiEQAAAABJRU5ErkJggg==",
+    "linkUrl": "https://api.qenta.com/link/pbl/checkout/0975b0f3-34e1-49b1-8786-943d1a874684"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ordersForLink"><a class="anchor" href="#ordersForLink"></a>Orders for Link</h3>
+<div class="paragraph">
+<p>For more information about every order/payment processed with a link send a <span class="endpoint-method-get">GET</span> request to the base URL and include the link ID. ID was provided in the initial response for creating a link and the path for orders (/links/{id}/orders):</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links/{id}/orders</code></p>
+</div>
+<div class="listingblock source_10">
+<div class="title">Response Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-JSON hljs" data-lang="JSON">{
+    "items": [
+        {
+            "id": "23e55dff-d144-46ce-9b53-454780541540",
+            "linkConfigId": "0975b0f3-34e1-49b1-8786-943d1a874684",
+            "amount": 55.00,
+            "currency": "EUR",
+            "paymentType": {
+                "id": 3,
+                "name": "CCARD",
+                "description": "Credit Card, Maestro SecureCode"
+            },
+            "financialInstitution": "Visa",
+            "language": "de",
+            "orderNumber": "15291418",
+            "paymentState": {
+                "id": 1,
+                "state": "SUCCESS"
+            },
+            "orderDescription": "Test:0000",
+            "purchaseInformation": {
+                "additionalParameters": [],
+                "orderDescription": "Test:0000",
+                "orderReference": "123451234536567",
+                "consumerIpAddress": "10.137.4.3",
+                "consumerUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0",
+                "customerStatement": "123451234536567",
+                "consumerBillingFirstName": "test",
+                "consumerShippingFirstName": "test",
+                "consumerBillingLastName": "qenta",
+                "consumerShippingLastName": "qenta",
+                "consumerEmail": "test@qenta.com",
+                "consumerBillingAddress1": "qenta 1",
+                "consumerShippingAddress1": "qenta 1",
+                "consumerBillingCity": "Vienna",
+                "consumerShippingCity": "Vienna",
+                "consumerBillingCountry": "AT",
+                "consumerShippingCountry": "AT",
+                "consumerBillingZipCode": "1337",
+                "consumerShippingZipCode": "1337",
+                "basketItem": [
+                    {
+                        "name": "test product",
+                        "articleNumber": "123",
+                        "description": "test products",
+                        "quantity": 1,
+                        "unitGrossAmount": 55.00,
+                        "unitTaxAmount": 5.00,
+                        "unitTaxRate": 10.000,
+                        "unitNetAmount": 50.00
+                    }
+                ],
+                "basketItems": "1",
+                "consumerBillingAddress2": "",
+                "consumerBillingState": "Vienna",
+                "consumerShippingAddress2": "",
+                "consumerShippingState": "Vienna",
+                "consumerShippingPhone": "13377331",
+                "consumerBirthDate": "2001-11-30"
+            },
+            "timestamp": "2022-11-30T10:46:30.972+00:00",
+            "createdAt": "2022-11-30T10:45:39.849+00:00"
+        },
+        {
+            "id": "14805b28-764c-41b2-a185-c6df54f1cb6d",
+            "linkConfigId": "0975b0f3-34e1-49b1-8786-943d1a874684",
+            "amount": 55.00,
+            "currency": "EUR",
+            "paymentType": {
+                "id": 3,
+                "name": "CCARD",
+                "description": "Credit Card, Maestro SecureCode"
+            },
+            "financialInstitution": "MC",
+            "language": "de",
+            "orderNumber": "9300972",
+            "paymentState": {
+                "id": 1,
+                "state": "SUCCESS"
+            },
+            "orderDescription": "Test:0000",
+            "purchaseInformation": {
+                "additionalParameters": [],
+                "orderDescription": "Test:0000",
+                "orderReference": "123451234545602",
+                "consumerIpAddress": "10.137.4.19",
+                "consumerUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0",
+                "customerStatement": "123451234545602",
+                "consumerBillingFirstName": "qenta",
+                "consumerShippingFirstName": "qenta",
+                "consumerBillingLastName": "test",
+                "consumerShippingLastName": "test",
+                "consumerEmail": "test@qenta.com",
+                "consumerBillingAddress1": "Test 1",
+                "consumerShippingAddress1": "Test 1",
+                "consumerBillingCity": "Graz",
+                "consumerShippingCity": "Graz",
+                "consumerBillingCountry": "AT",
+                "consumerShippingCountry": "AT",
+                "consumerBillingZipCode": "8020",
+                "consumerShippingZipCode": "8020",
+                "basketItem": [
+                    {
+                        "name": "test product",
+                        "articleNumber": "123",
+                        "description": "test products",
+                        "quantity": 1,
+                        "unitGrossAmount": 55.00,
+                        "unitTaxAmount": 5.00,
+                        "unitTaxRate": 10.000,
+                        "unitNetAmount": 50.00
+                    }
+                ],
+                "basketItems": "1",
+                "consumerBillingAddress2": "",
+                "consumerBillingState": "Styria",
+                "consumerShippingAddress2": "",
+                "consumerShippingState": "Styria",
+                "consumerShippingPhone": "1234567",
+                "consumerBirthDate": "2001-11-30"
+            },
+            "timestamp": "2022-11-30T10:45:29.183+00:00",
+            "createdAt": "2022-11-30T10:43:41.838+00:00"
+        }
+    ],
+    "currentPage": 0,
+    "totalItems": 2,
+    "totalPages": 1
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Detailed descriptions for parameters from the example are <a href="#orderRelatedResponse">here</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="postProcessCommands"><a class="anchor" href="#postProcessCommands"></a>Post-Process Commands for Created Links</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With the following commands, the merchant is able to alter the accessibility of their links, which are already created:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#disableLinkId">Disable link by ID</a> - PUT call for deactivation of an existing link.</p>
+</li>
+<li>
+<p><a href="#reactiveLinkId">Reactivate link by ID</a> - PUT call for reactivation an existing link.</p>
+</li>
+<li>
+<p><a href="#deleteLinkId">Delete link by ID</a> - DELETE call for completely deleting an existing link.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph credential-header">
+<p><strong>Credentials</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Basic-Auth (Test)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credentials that <a href="../../contact/" class="page" target="\"_blank\"">integration specialist</a> team provides.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base-URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>https://api.qenta.com/link</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph request-headers">
+<p><strong>Request Headers</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content-Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>application/json</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authorization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Basic &lt;Base64 encoded username and password&gt;</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="disableLinkId"><a class="anchor" href="#disableLinkId"></a>Disable Link by ID</h3>
+<div class="paragraph">
+<p><span class="endpoint-method-put">PUT</span> request with whom the active link can be disabled, so the consumer is not able to call the link again. To check if a link is enabled or not the data transfer object from the link by ID command should be executed. In the response, the merchant will receive the parameter enabled with the value <code>true</code> or <code>false</code>.</p>
+</div>
+<div class="paragraph">
+<p>Send a <span class="endpoint-method-put">PUT</span> request to the base URL and include the link ID, which was provided in the initial response for creating a link and the correct path (/links/disable/”id”).</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links/disable/{id}</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reactiveLinkId"><a class="anchor" href="#reactiveLinkId"></a>Reactivate Link by ID</h3>
+<div class="paragraph">
+<p><span class="endpoint-method-put">PUT</span> request with whom the active link can be reactivated using the link ID.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To check, if a link is disabled or not, send a <a href="#dataTransferObject">data transfer object from link by ID</a> request first and check the response field <code>expirationStatus</code>. If the value "Deactivated" is returned, the link is disabled and can be reactivated. If the returned value is "Expired", the link can&#8217;t be reactivated anymore.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If a link has already expired (expiry date for <code>linkValidTo</code> has passed), the link is not reachable either, even if the state "enabled" with the value "false" is set.</p>
+</div>
+<div class="paragraph">
+<p>Send a <span class="endpoint-method-put">PUT</span> request to the base URL and include the link ID, which was provided in the initial response for creating a link and the correct path (/links/reactivate/”id”).</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links/reactivate/{id}</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleteLinkId"><a class="anchor" href="#deleteLinkId"></a>Delete Link by ID</h3>
+<div class="paragraph">
+<p><span class="endpoint-method-delete">DELETE</span> call with whom the link is completely deleted.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If this command is executed, the information from the link can&#8217;t be gathered anymore.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Send a <span class="endpoint-method-delete">DELETE</span> request to the base URL and include the link ID, which was provided in the initial response for creating a link and the correct path (/links/”id”).</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links/{id}</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="batchCommands"><a class="anchor" href="#batchCommands"></a>Batch Commands</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With these commands, more than one link at once can be disabled or deleted.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#disableBatch">Disable batch</a> - PUT call for deactivation of a batch of existing links.</p>
+</li>
+<li>
+<p><a href="#deleteBatch">Delete batch</a> - DELETE call for completely deleting a batch of existing links.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph credential-header">
+<p><strong>Credentials</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Basic-Auth (Test)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credentials that <a href="../../contact/" class="page" target="\"_blank\"">integration specialist</a> team provides.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base-URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>https://api.qenta.com/link</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph request-headers">
+<p><strong>Request Headers</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content-Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>application/json</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authorization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Basic &lt;Base64 encoded username and password&gt;</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="disableBatch"><a class="anchor" href="#disableBatch"></a>Disable Batch</h3>
+<div class="paragraph">
+<p><span class="endpoint-method-put">PUT</span> request with whom more than one link can be disabled at once using link IDs.</p>
+</div>
+<div class="paragraph">
+<p>Provide the link IDs in the request body and send a <span class="endpoint-method-put">PUT</span> request to the base URL and the correct path (/links/disable).</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links/disable</code></p>
+</div>
+<div class="listingblock source_10">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+    "{id}",
+    "{id}",
+    "{id}"
+]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleteBatch"><a class="anchor" href="#deleteBatch"></a>Delete Batch</h3>
+<div class="paragraph">
+<p><span class="endpoint-method-delete">DELETE</span> call with whom more than one link can be deleted at once using link IDs.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If this command is executed, the information from the link can&#8217;t be gathered anymore.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Send a HTTP <span class="endpoint-method-delete">DELETE</span>  request to the base URL and include the link ID, which was provided in the initial response for creating a link and the correct path (/links/delete).</p>
+</div>
+<div class="paragraph">
+<p><code>https://api.qenta.com/link/links/delete</code></p>
+</div>
+<div class="listingblock source_10">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+    "{id}",
+    "{id}",
+    "{id}"
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="parameters"><a class="anchor" href="#parameters"></a>QPBL API Parameters</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="requestParameters"><a class="anchor" href="#requestParameters"></a>Request Parameters</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title of the link that will be shown in the portal description.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">orderDescription</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currency</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency of the requested amount. Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">currency</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>orderReference</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request parameter <code><a href="../../parameters/frontend/optional-parameters/#higlyRecommendedOptionalParameters" class="page" target="\"_blank\"">orderReference</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>linkValidFrom</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines date and time from when the link is valid.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>linkValidTo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines date and time until the link is valid.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>linkCallLimit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines how many times a link can be called.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayBasketData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines if basket data are shown in the checkout or not. <strong>If the consumer data are not needed, set to "false" for a simple link.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayBillingData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines if customer shipping data are shown in the checkout or not (will be shown anyway if it is sent within customer parameters).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayShippingData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines if customer shipping data are shown in the checkout or not (will be shown anyway if it is sent within customer parameters).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows if a link is enabled/accessible or not.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">paymentType</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymenttypeSortOrder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines the sort order of payment types, shown on the checkout page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amount to pay - needs to be sent, if the merchant doesn&#8217;t provide basket fields. Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">amount</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Customer specific parameters - either provided in the request or entered by customers.
+Request parameters for <a href="../../parameters/frontend/optional-parameters/#ConsumerShippingData" class="page" target="\"_blank\"">consumerShipping</a> and <a href="../../parameters/frontend/optional-parameters/#consumerBillingData" class="page" target="\"_blank\"">consumerBilling</a>:<br>
+<span class="list-margin"><code>"firstName"</code></span><br>
+<span class="list-margin"><code>"lastName"</code></span><br>
+<span class="list-margin"><code>"phone"</code></span><br>
+<span class="list-margin"><code>"email"</code></span><br>
+<span class="list-margin"><code>"address"</code></span><br>
+<span class="list-margin"><code>"street"</code></span><br>
+<span class="list-margin"><code>"city"</code></span><br>
+<span class="list-margin"><code>"zipCode"</code></span><br>
+<span class="list-margin"><code>"country"</code></span><br>
+<span class="list-margin"><code>"countryState"</code></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>basket</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Basket specific parameters.
+Request Parameters <a href="../../parameters/frontend/optional-parameters/#shoppingBasket" class="page" target="\"_blank\"">basketItems</a>:<br>
+<span class="list-margin"><code>"basketItems"</code></span><br>
+<span class="list-margin"><code>"articleNumber"</code></span><br>
+<span class="list-margin"><code>"description"</code></span><br>
+<span class="list-margin"><code>"name"</code></span><br>
+<span class="list-margin"><code>"quantity"</code></span><br>
+<span class="list-margin"><code>"unitGrossAmount"</code></span><br>
+<span class="list-margin"><code>"unitNetAmount"</code></span><br>
+<span class="list-margin"><code>"unitTaxAmount"</code></span><br>
+<span class="list-margin"><code>"unitTaxRate"</code></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>successUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL of online shop where the consumer is forwarded when the payment process has been completed. Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">successUrl</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL of the page where consumer is forwarded when the payment process has been canceled. Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">cancelUrl</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>failureUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL of online shop where consumer is forwarded when the payment process has failed for some reason. Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">failureUrl</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serviceUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL of a web page in an online shop that informs the consumer about the different possibilities to get in contact with the merchant. Request parameter <code><a href="../../parameters/frontend/required-parameters/#requiredParametersSeamlessandPage" class="page" target="\"_blank\"">serviceUrl</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>merchantLogoUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL to an image on the web server, that will be displayed during the payment process. Request parameter <code><a href="../../parameters/frontend/optional-parameters/#additionallyOptionalForPage" class="page" target="\"_blank\"">imageURL</a></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="responseParameters"><a class="anchor" href="#responseParameters"></a>Response Parameters</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link ID created by QENTA.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expirationStatus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status that are showing if the link is still available to call or not.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lastAccess</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date and time of the last time the link has been called.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lastPayment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date and time of the last successful payment of the link.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentStatus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payment status can be fail, pending or paid.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amount to pay within the link.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sales</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of all successful payment amounts made with the link.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>orderQuantity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of all orders for the link.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clicks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of how many times a link has been clicked/called.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createdAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date and time the link has been created.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payment type used by the customer.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="orderRelatedResponse"><a class="anchor" href="#orderRelatedResponse"></a>Order Related Response Parameters</h3>
+<div class="paragraph">
+<p>Parameters that will be received for gathering order specific commands (<a href="#ordersForLink">Orders for Link</a>).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="../../parameters/detailed-description/#financialInstitution" class="page" target="\"_blank\"">financialInstitution</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The financial institution, chosen by the customer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>language</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The language on the checkout page, chosen by the customer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>orderNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payment related <a href="../../parameters/detailed-description/#orderNumber" class="page" target="\"_blank\"">orderNumber</a>, created by the QENTA.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>paymentState</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fields that are indicating whether the payment was successful or not<br></p>
+<p class="tableblock"><code>id</code> - every state has a specific id:<br>
+<code>SUCCESS</code>=1,<br>
+<code>CANCEL</code>=5,<br>
+<code>FAILURE</code>=7,<br>
+in progress=9<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>state</code> - indicates the state itself (<code>SUCCESS</code>, <code>CANCEL</code>, <code>FAILURE</code>, <code>IN_PROGRESS</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="../../parameters/detailed-description/#orderDescription" class="page">orderDescription</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description of the order.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>purchaseInformation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consumer related parameter fields:<br>
+<code>additionalParameters</code><br>
+<code>orderDescription</code><br>
+<code>orderReference</code><br>
+<code>customerStatement</code><br>
+<code>basketItems</code> - Quantity of items in the basket.<br>
+<code>consumerIpAddress</code> - IP address of consumer&#8217;s device.<br>
+<code>consumerUserAgent</code> - User Agent that consumers have used.<br>
+<code>consumerBillingFirstName</code><br>
+<code>consumerShippingFirstName</code><br>
+<code>consumerBillingLastName</code><br>
+<code>consumerShippingLastName</code><br>
+<code>consumerEmail</code><br>
+<code>consumerBillingAddress1</code><br>
+<code>consumerShippingAddress1</code><br>
+<code>consumerBillingCity</code><br>
+<code>consumerShippingCity</code><br>
+<code>consumerBillingCountry</code><br>
+<code>consumerShippingCountry</code><br>
+<code>consumerBillingZipCode</code><br>
+<code>consumerShippingZipCode</code><br>
+<code>consumerBillingAddress2</code><br>
+<code>consumerBillingState</code><br>
+<code>consumerShippingAddress2</code><br>
+<code>consumerShippingState</code><br>
+<code>consumerShippingPhone</code><br>
+<code>consumerBirthDate</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basketItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains more details about the basket fields:<br>
+<code>name</code> - Name of the product.<br>
+<code>articleNumber</code> - Number of the article.<br>
+<code>description</code> - Product description.<br>
+<code>quantity</code> - Quantity of products.<br>
+<code>unitGrossAmount</code> - Gross amount of one product.<br>
+<code>unitTaxAmount</code> - Tax amount of one product.<br>
+<code>unitTaxRate</code> - Tax rate of one product.<br>
+<code>unitNetAmount</code> - Net amount of one product.<br></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Detailed description of the consumer data parameters are <a href="../../parameters/frontend/optional-parameters/#consumerData" class="page" target="\"_blank\"">here</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer qenta">
+  <div class="uk-section-secondary uk-section">
+    <div class="uk-container">
+      <div class="tm-grid-expand uk-grid-large uk-grid-margin-large uk-grid" uk-grid="">
+        <div class="uk-width-1-3@m uk-first-column">
+          <div class="uk-position-relative uk-margin" style="left: 0px; bottom: 20px;">
+            <a class="el-link" href="#2" uk-scroll=""><img class="el-image" alt="" uk-img=""
+                src="https://payments.qenta.com/wp-content/uploads/2022/06/RZ-Logo-QENTA-CMYK-invertiert-2.svg" width="120"></a>
+          </div> 
+          <div class="uk-panel uk-text-meta uk-position-relative" style="bottom: 20px;">
+            <p>©2023 - QENTA PAYMENT CEE GMBH</p>
+          </div>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/">COMPANY</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/merchant-login/">MERCHANT LOGIN</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/payment-solutions/">SOLUTIONS</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/contact/">CONTACT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com" target="_blank">ONLINE GUIDES</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/download-center/">DOWNLOAD CENTER</a>
+              </li>
+            </ul>
+          </div>
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/en/imprint/">IMPRINT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com/protection-personal-data/data-protection-en/">DATA PROTECTION</a>
+              </li> 
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/terms-and-conditions/">T&C</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/_/js/site.js"></script>
+<script src="/_/js/vendor/lunr.js"></script>
+<script src="/_/js/vendor/search.js" id="search-script" data-base-path="../../../.." data-page-path="/online-guides/main/API/paybylinkAPI/"></script>
+<script async src="/search-index.js"></script>
+<script async src="/_/js/vendor/highlight.js"></script>
+<script async src="/_/js/vendor/behavior.js"></script>  </body>
+</html>

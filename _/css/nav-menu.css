@@ -1,0 +1,42 @@
+.nav-item:not(.is-active){
+color: var(--primar-color);
+letter-spacing: 0.05px;
+font-weight: bold;
+font-stretch: condensed;
+font-variant-caps: small-caps;
+}  
+
+.nav-item.is-active {
+color: var(--primar-color);
+letter-spacing: 0.05px;
+font-weight: bold;
+font-stretch: condensed;
+font-variant-caps: small-caps;
+}
+
+.nav-item:not(.is-active):hover{
+color:var(--primar-color-light);
+}
+
+.nav-panel-menu > .nav-menu > .nav-list > .nav-item > .nav-list > .nav-item.is-current-page.is-active > a{
+    font-weight: bold;
+}
+
+.nav-menu h3.title > a:hover{
+    text-decoration: none;
+    color: var(--primar-color-light);
+    }
+    
+@media screen and (max-width: 1435px){
+    .nav-menu h3.title{
+    font-weight: bold;
+    color: var(--primar-color);
+    margin-left: .75rem;
+    }
+}
+
+.nav-item[data-depth="1"]:nth-child(1) {
+    margin-top: 10px;
+    border-top: 2px solid var(--secundar-color-light);
+    padding-top: 20px;
+}

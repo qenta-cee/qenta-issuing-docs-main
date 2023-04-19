@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Card Management :: Banking as a Service Guides</title>
+    <link rel="canonical" href="https://guides.qenta.com/online-guides/main/card-management/">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="/_/css/site.css">
+<link rel="stylesheet" href="/_/css/search.css">
+<link rel="stylesheet" href="/_/css/qenta.css">
+<link rel="stylesheet" href="https://use.typekit.net/ucf2gvc.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/_/css/nav-menu.css">
+<link rel="stylesheet" href="/_/css/tables.css">
+    <script>var uiRootPath = '/_'</script>
+    <link rel="icon" href="/_/img/Favicon-QENTA-RGB.png" type="image/png">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://guides.qenta.com">Banking as a Service Guides</a>
+        <div class="navbar-item search-item">
+          <input id="search-input" type="text" placeholder="Search">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://guides.qenta.com/">Home</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/">Enterprise</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/haendler-login/">Merchant Login</a>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://guides.qenta.com/contact/">Contact</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="online-guides" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../">Banking as a Service Guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cardholder-onboarding-process/">Cardholder Onboarding Process</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="./">Card Management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../events/">Event</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core-concepts/">Core Concepts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/">Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../contact/">Contact</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Banking as a Service Guides</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../">Banking as a Service Guides</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../">Banking as a Service Guides</a></li>
+    <li><a href="./">Card Management</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Card Management</h1>
+<div class="sect1">
+<h2 id="general"><a class="anchor" href="#general"></a>General</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <strong>Card</strong> represents the user&#8217;s (cardholder&#8217;s) physical or virtual card.
+Cards spend the funds provided by the linked <strong>Balance Account</strong>.
+Multiple <strong>Card</strong> resources per <strong>Balance Account</strong> can be created.</p>
+</div>
+<div class="paragraph">
+<p>When onboarding new clients, the organization must first onboard and upload information about its beneficial owner (as described <a href="../cardholder-onboarding-process/" class="page">here</a>) before cardholders, cards and associated balance accounts can be created.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="operations"><a class="anchor" href="#operations"></a>Operations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To see the current version of operations please see <a href="https://swagger.qenta.com/baas/" target="\"_blank\"">Swagger UI</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="createCards"><a class="anchor" href="#createCards"></a>Create Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/createCard" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>Cards are issued based on the associated <strong>Legal Entity</strong> of the cardholder applicant.
+The residential address country of cardholder applicant the will determine the possible card products which it can obtain.
+The legal entity&#8217;s identity official name will determine the card name on the card.</p>
+</div>
+<div class="paragraph">
+<p>This can be physical and/or virtual cards.<br>
+Virtual cards can be converted to physical cards in a later stage (<a href="#convertCards">Convert Cards</a>)</p>
+</div>
+<div class="paragraph">
+<p>Newly created cards will have status = NEW.
+They will transition to status = ORDERED automatically.
+The process triggers two events:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>card.created (card = NEW)</p>
+</li>
+<li>
+<p>card.updated (card = ORDERED)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If a manual activation flow is configured then the card must be activated (<a href="#activateCards">Activate Cards</a>) before it can be used for payments.</p>
+</div>
+<div class="sect2">
+<h3 id="cardDeliveryAddress"><a class="anchor" href="#cardDeliveryAddress"></a>Card Delivery Address</h3>
+<div class="paragraph">
+<p>Depending on the card program, a cardholder (legal entity) may have a physical and/or virtual card associated with their account.
+Physical cards require a delivery address associated with the cardholder, while virtual cards do not need a delivery address.</p>
+</div>
+<div class="paragraph">
+<p>If no address is given for a physical card, then the residential address of the <strong>Legal Entity</strong> resource is used.</p>
+</div>
+<div class="paragraph">
+<p>The card delivery is part of the KYC process and must verify the residential address of the individual then the delivery address must be the same as the residential address or null.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="embossedName"><a class="anchor" href="#embossedName"></a>Embossed Name</h3>
+<div class="paragraph">
+<p>The embossed name on the card will be derived from the cardholder applicant&#8217;s submitted name or the name on the ID document. This can be overridden by using the embossedCardHolderName attribute of the card.<br></p>
+</div>
+<div class="paragraph">
+<p>If you use multi line embossed names on your cards then '\n' is the line separator.<br></p>
+</div>
+<div class="paragraph">
+<p>As the embossed name is a protected detail of the card it won&#8217;t be returned by the cards API but is part of the <a href="#cardImageVisualization">Card Image Visualization</a> API.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="activateCards"><a class="anchor" href="#activateCards"></a>Activate Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/activateCard" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>Available flows are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Active after creation</p>
+</li>
+<li>
+<p>Manual activation with no additional validation parameters</p>
+</li>
+<li>
+<p>Manual activation with CVV validation</p>
+</li>
+<li>
+<p>Manual activation with last four digits validation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please talk to your implementation manager for configuring the correct card activation flow.<br>
+The card activation triggers a card.updated event.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="blockUnblockCards"><a class="anchor" href="#blockUnblockCards"></a>Block / Unblock Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/blockCard" target="\"_blank\"">Swagger UI</a> and <a href="https://swagger.qenta.com/baas/#tag/Card/operation/deleteCardBlock" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>Cards can be blocked by us or by you. A blocked card can be unblocked.</p>
+</div>
+<div class="paragraph">
+<p>We block cards according to our Terms and Conditions, e.g. fraud attempts and other suspicious activity.</p>
+</div>
+<div class="paragraph">
+<p>You can block cards based on your Terms and Conditions and cardholder requests.</p>
+</div>
+<div class="paragraph">
+<p>A card block triggers a card.updated event.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cancelCards"><a class="anchor" href="#cancelCards"></a>Cancel Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/cancelCard" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>Cards can be cancelled by us or by you. A cancelled card <strong>cannot</strong> be activated again.</p>
+</div>
+<div class="paragraph">
+<p>We cancel cards according to our Terms and Conditions.</p>
+</div>
+<div class="paragraph">
+<p>You can cancel cards based on your Terms and Conditions and cardholder requests, e.g. the card was lost / stolen.</p>
+</div>
+<div class="sect2">
+<h3 id="lostStolen"><a class="anchor" href="#lostStolen"></a>Lost / Stolen</h3>
+<div class="paragraph">
+<p>When the cancel reason is LOST or STOLEN then a new card of the same type (physical / virtual) is automatically created and ordered.
+If the new card is physical then it will be delivered to the same address as the previous.
+You will receive the card details by a card created event.
+The card can be linked to the old one by the previousCardId attribute.</p>
+</div>
+<div class="paragraph">
+<p>The process will trigger the following events:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>card.updated (old card, status = CANCELLED)</p>
+</li>
+<li>
+<p>card.created (new card, status = NEW)</p>
+</li>
+<li>
+<p>card.updated (new card, status = ORDERED)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changeAuthenticationDetails"><a class="anchor" href="#changeAuthenticationDetails"></a>Change the Authentication Details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/patchAuthentication" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>Changing the authentication phone number will change the phone number used for the 3DS authentication.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cardFeatures"><a class="anchor" href="#cardFeatures"></a>Card features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/patchFeatures" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>The following card features are implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ATM enabled: ATM withdrawals can be blocked by setting false</p>
+</li>
+<li>
+<p>NFC enabled: NFC payments can be blocked by setting false</p>
+</li>
+<li>
+<p>E-Commerce enabled: E-Commerce payments can be blocked by setting false</p>
+</li>
+<li>
+<p>Region restriction:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>No restriction: payments are not blocked due to regional aspects</p>
+</li>
+<li>
+<p>Region: will block any payment with a merchant located outside the defined region (EU + EFTA)</p>
+</li>
+<li>
+<p>Domestic: will block any payment with a merchant located outside the issuing country</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cardLimits"><a class="anchor" href="#cardLimits"></a>Card limits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Limits are configured according to the BIN requirements and your needs. If you need special limits setup by default for your cards please consult your implementation manager.</p>
+</div>
+<div class="paragraph">
+<p>Limit configurations can be separated using the following criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A transaction category</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ALL - will hit any kind of authorization.</p>
+</li>
+<li>
+<p>CASH - will hit ATM / Cashback authorizations.</p>
+</li>
+<li>
+<p>PURCHASE - will hit other authorizations than CASH (including the purchase part of cashback).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A MCC list</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The limit calculation is restricted to the configured MCC list. If no list is given any MCC will be added to the calculation.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Every limit configuration can configure the following limits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>daily limit</p>
+</li>
+<li>
+<p>weekly limit</p>
+</li>
+<li>
+<p>monthly limit</p>
+</li>
+<li>
+<p>yearly limit</p>
+</li>
+<li>
+<p>daily rolling limit</p>
+</li>
+<li>
+<p>weekly rolling limit</p>
+</li>
+<li>
+<p>monthly rolling limit</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Normal limits vs rolling limits</strong></p>
+</div>
+<div class="paragraph">
+<p>Both types of limits can configure:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>enabled: the limit config can be disabled</p>
+</li>
+<li>
+<p>max spending: sum of all authorized amount &lt; X</p>
+</li>
+<li>
+<p>max transaction count: sum of all authorizations &lt; X</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Rolling limits also define the window size. A daily rolling limit with window size four will always look at the last four days (including the present).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="convertCards"><a class="anchor" href="#convertCards"></a>Convert Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/patchCardType" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>Virtual cards can be converted to physical.
+This data can be set using the request object because physical cards have a mandatory delivery address and support the usage of the PIN.</p>
+</div>
+<div class="paragraph">
+<p>A card conversion will create a new <strong>Card</strong> resource.
+Both resources will share the same card number but will have a different CVV and Expiry date if the conversion was later than the same month of the virtual card.</p>
+</div>
+<div class="paragraph">
+<p>Both will be active and usable by the cardholder with their unique details (CVV / Expiry date).
+The virtual card will be cancelled when the physical card is activated.</p>
+</div>
+<div class="paragraph">
+<p>Important:</p>
+</div>
+<div class="paragraph">
+<p>As both cards share the same card number, some operations will affect both card resources: block/unblock, cancel and change authentication phone number.</p>
+</div>
+<div class="paragraph">
+<p>The process will trigger the following events:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>card.created (new card, status = NEW)</p>
+</li>
+<li>
+<p>card.updated (new card, status = ORDERED)</p>
+</li>
+<li>
+<p>card.updated (new card, status = ACTIVE, please see <a href="#activateCards">Activate Cards</a>)</p>
+</li>
+<li>
+<p>card.updated (old card, status = CANCELLED)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cardImageVisualization"><a class="anchor" href="#cardImageVisualization"></a>Card Image Visualization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We do not host the image of a card ourselves.
+Please contact your implementation manger on the image file to use and host it on your own.</p>
+</div>
+<div class="paragraph">
+<p>To show the image with the card data we provide an endpoint to fetch it.
+The fetch operation must be done from the cardholder&#8217;s device.
+The data must not be routed through your system if you are not PCI DSS certified.</p>
+</div>
+<div class="paragraph">
+<p>The fetch is unauthenticated and therefore must be initiated through the trusted environment.</p>
+</div>
+<div class="paragraph">
+<p>Our recommended flow is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The cardholder starts the show card process</p>
+</li>
+<li>
+<p>You authenticate the cardholder (e.g. fingerprint)</p>
+</li>
+<li>
+<p>You initiate the call using your backend</p>
+</li>
+<li>
+<p>You fetch the data on the cardholders device and combine it with the card image</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Card visualizations can&#8217;t be created for physical cards when they are configured with a manual activation flow using a card detail (like the last four digits) and are not activated yet.</p>
+</div>
+<div class="sect2">
+<h3 id="initiateVisualization"><a class="anchor" href="#initiateVisualization"></a>Initiate a Visualization</h3>
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/createCardVisualization" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>This is an authenticated backend to backend call.
+It creates an OTC (One Time Code) which is valid for 15 seconds.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fetchCardData"><a class="anchor" href="#fetchCardData"></a>Fetch the Card Data / Show the Image</h3>
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/fetchCardData" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>This is an unauthenticated call that must be done from the cardholder&#8217;s device.
+Use the same deviceId as for the initiate call and the provided OTC (One Time Code) of the initiate call response.</p>
+</div>
+<div class="paragraph">
+<p>Combine the card data with the card image and show it to the cardholder.</p>
+</div>
+<div class="paragraph">
+<p>A fetchCardData call is only valid when</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the OTC (One Time Code) and deviceID match.</p>
+</li>
+<li>
+<p>the call is done within 15 sec of the initiate call.</p>
+</li>
+<li>
+<p>the call is done the first time.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="cardName"><a class="anchor" href="#cardName"></a>Card Name</h4>
+<div class="paragraph">
+<p>If you use multi line card names on your cards then '\n' is the line separator.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="investigateProblemsResults"><a class="anchor" href="#investigateProblemsResults"></a>Investigate Problems/Results</h3>
+<div class="paragraph">
+<p>For technical details please see <a href="https://swagger.qenta.com/baas/#tag/Card/operation/findCardVisualizationById" target="\"_blank\"">Swagger UI</a></p>
+</div>
+<div class="paragraph">
+<p>Use the GET API to keep track of what happened to the initiated visualization.
+It provides information if it was fetched successfully or not and how often it was fetched.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer qenta">
+  <div class="uk-section-secondary uk-section">
+    <div class="uk-container">
+      <div class="tm-grid-expand uk-grid-large uk-grid-margin-large uk-grid" uk-grid="">
+        <div class="uk-width-1-3@m uk-first-column">
+          <div class="uk-position-relative uk-margin" style="left: 0px; bottom: 20px;">
+            <a class="el-link" href="#2" uk-scroll=""><img class="el-image" alt="" uk-img=""
+                src="https://payments.qenta.com/wp-content/uploads/2022/06/RZ-Logo-QENTA-CMYK-invertiert-2.svg" width="120"></a>
+          </div> 
+          <div class="uk-panel uk-text-meta uk-position-relative" style="bottom: 20px;">
+            <p>©2023 - QENTA PAYMENT CEE GMBH</p>
+          </div>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/">COMPANY</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/merchant-login/">MERCHANT LOGIN</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/payment-solutions/">SOLUTIONS</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/contact/">CONTACT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com" target="_blank">ONLINE GUIDES</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/download-center/">DOWNLOAD CENTER</a>
+              </li>
+            </ul>
+          </div>
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/en/imprint/">IMPRINT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com/protection-personal-data/data-protection-en/">DATA PROTECTION</a>
+              </li> 
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/terms-and-conditions/">T&C</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/_/js/site.js"></script>
+<script src="/_/js/vendor/lunr.js"></script>
+<script src="/_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/online-guides/main/card-management/"></script>
+<script async src="/search-index.js"></script>
+<script async src="/_/js/vendor/highlight.js"></script>  </body>
+</html>

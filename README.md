@@ -86,3 +86,4 @@ It is a simple list of pages and their hierarchy.
 # Dockerfiles
 To add search functionality `antora-site-generator-lunr` is installed in the container. 
 See `antora.dockerfile` for required ENV variables if you run antora without the provided Dockerfile/Makefile commands.
+

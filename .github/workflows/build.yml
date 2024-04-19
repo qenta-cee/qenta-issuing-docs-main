@@ -16,7 +16,11 @@ jobs:
     steps:
       - name: Check if secret is available
         run: |
-            if [[ -z "${{ secrets.BOT_PAT }}" ]]; then echo "Secret is not set or is empty" else echo "Secret is set" fi
+          if [[ -z "${{ secrets.BOT_PAT }}" ]]; then 
+            echo "Secret is not set or is empty"
+          else
+            echo "Secret is set"
+          fi
       - name: Checkout
         uses: actions/checkout@v4
         with:

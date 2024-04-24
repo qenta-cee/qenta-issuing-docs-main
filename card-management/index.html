@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Card Management :: Banking as a Service Guides</title>
+    <link rel="canonical" href="https://guides.qenta.com/online-guides/main/card-management/">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="/_/css/site.css">
+<link rel="stylesheet" href="/_/css/search.css">
+<link rel="stylesheet" href="/_/css/qenta.css">
+<link rel="stylesheet" href="https://use.typekit.net/ucf2gvc.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/_/css/nav-menu.css">
+<link rel="stylesheet" href="/_/css/tables.css">
+    <script>var uiRootPath = '/_'</script>
+    <link rel="icon" href="/_/img/Favicon-QENTA-RGB.png" type="image/png">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://guides.qenta.com">Banking as a Service Guides</a>
+        <div class="navbar-item search-item">
+          <input id="search-input" type="text" placeholder="Search">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://guides.qenta.com/">Home</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/">Enterprise</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/haendler-login/">Merchant Login</a>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://guides.qenta.com/contact/">Contact</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="online-guides" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../">Embedded Finance Guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cardholder-onboarding-process/">Cardholder Onboarding Process</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="./">Card Management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../events/">Event</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core-concepts/">Core Concepts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/">Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../contact/">Contact</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Embedded Finance Guides</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../">Embedded Finance Guides</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../">Embedded Finance Guides</a></li>
+    <li><a href="./">Card Management</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Card Management</h1>
+<div class="sect1">
+<h2 id="generalOverview"><a class="anchor" href="#generalOverview"></a>General Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Card in our system represents the cardholder&#8217;s physical or virtual card. These cards utilize funds provided by the linked Balance Account. It&#8217;s important to note that multiple Card resources can be created per Balance Account.</p>
+</div>
+<div class="paragraph">
+<p>During the onboarding process for new clients, the organization must first onboard and upload information about its beneficial owner and control person, as described in the <a href="../cardholder-onboarding-process/" class="page">previous sections</a>. This prerequisite ensures that necessary background checks and verifications are completed before cardholders, cards, and associated balance accounts can be created.</p>
+</div>
+<div class="paragraph">
+<p>This structured approach helps maintain regulatory compliance and ensures that all necessary parties and accounts are properly established before card issuance. If you have any questions or need assistance with card management processes, our team is available to provide guidance and support. We&#8217;re committed to facilitating a smooth and compliant card management experience for your organization.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="createCards"><a class="anchor" href="#createCards"></a>Create Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Create card” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/createCard">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Cards are issued based on the associated Legal Entity of the cardholder applicant. The residential address country of the cardholder applicant will determine the available card products. The legal entity&#8217;s official name will determine the card name displayed on the card.</p>
+</div>
+<div class="paragraph">
+<p>These cards can be physical and/or virtual. Virtual cards have the option to be converted to physical cards at a later stage through the <a href="#convertCards">Convert Cards</a> process.</p>
+</div>
+<div class="paragraph">
+<p>Upon creation, newly issued cards will have a status of NEW, which will automatically transition to ORDERED. This process triggers two events:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>card.created (card = NEW)</p>
+</li>
+<li>
+<p>card.updated (card = ORDERED)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If a manual activation flow is configured, the card must be activated (through the <a href="#activateCards">Activate Cards</a> process) before it can be used for payments.</p>
+</div>
+<div class="paragraph">
+<p>This structured approach ensures that cards are issued accurately and in alignment with regulatory requirements, providing a frictionless experience for cardholders. Should you have any questions or need assistance with card creation processes, our team is available to provide support and guidance. We&#8217;re dedicated to facilitating a smooth and efficient card issuance process for your organization.</p>
+</div>
+<div class="sect2">
+<h3 id="cardDeliveryAddress"><a class="anchor" href="#cardDeliveryAddress"></a>Card Delivery Address</h3>
+<div class="paragraph">
+<p>In accordance with the card program, a cardholder (legal entity) may have either a physical or virtual card associated with their account. Physical cards require a delivery address linked to the cardholder, whereas virtual cards do not need a delivery address.</p>
+</div>
+<div class="paragraph">
+<p>In scenarios where no address is provided for a physical card, the residential address specified in the Legal Entity resource is utilized.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to understand that verifying the individual&#8217;s residential address through the Know Your Customer (KYC) process is essential for card delivery. The delivery address must either align with the residential address or be left empty. In cases where it&#8217;s null, the default residential address of the legal entity will be used as a fallback.</p>
+</div>
+<div class="paragraph">
+<p>This rigorous approach enhances security and compliance with regulatory standards, safeguarding the integrity of the card issuance process. If you have any inquiries or require assistance with card delivery procedures, our team is available to provide support and guidance. We&#8217;re committed to facilitating a seamless and compliant card delivery experience for your organization.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="embossedName"><a class="anchor" href="#embossedName"></a>Embossed Name</h3>
+<div class="paragraph">
+<p>The name embossed on the card originates from the name submitted by the cardholder applicant or from the name on the submitted ID document. However, you have the option to override this default behavior by specifying the embossedCardHolderName attribute of the card.</p>
+</div>
+<div class="paragraph">
+<p>For cards featuring multi-line embossed names, '\n' serves as the line separator.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note that the embossed name is considered a protected detail of the card and therefore will not be returned by the cards API. However, it is accessible through the Card Image Visualization <a href="#cardImageVisualization">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>This approach ensures that the embossed name accurately reflects the cardholder&#8217;s information while maintaining confidentiality and security. Should you have any questions or require further information regarding embossed names on cards, our team is available to assist you. We&#8217;re committed to ensuring a seamless and personalized card issuance process for your organization.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="activateCards"><a class="anchor" href="#activateCards"></a>Activate Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Activate a card” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/activateCard">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>There are several available activation flows for cards:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Active after creation:</strong> Cards are automatically activated upon creation.</p>
+</li>
+<li>
+<p><strong>Manual activation with no additional validation parameters:</strong> Cards are activated manually without requiring additional validation.</p>
+</li>
+<li>
+<p><strong>Manual activation with CVV validation:</strong> Cards require manual activation, with the additional step of validating the CVV.</p>
+</li>
+<li>
+<p><strong>Manual activation with last four digits validation:</strong> Cards require manual activation, with the additional step of validating the last four digits of the PAN.</p>
+</li>
+<li>
+<p><strong>Manual activation with access code validation:</strong> Cards require manual activation, with the additional step of validating the account holder’s access code</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Please consult with your implementation manager to configure the appropriate card activation flow based on your specific requirements.</p>
+</div>
+<div class="paragraph">
+<p>Upon activation, a card.updated event is triggered to indicate the change in status.</p>
+</div>
+<div class="paragraph">
+<p>This flexibility in activation flows allows you to tailor the card activation process to best suit your organization&#8217;s needs and security preferences. If you have any questions or need assistance with configuring the card activation flow, our team is available to provide guidance and support. We&#8217;re dedicated to ensuring a smooth and secure card activation process for your organization.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="blockUnblockCards"><a class="anchor" href="#blockUnblockCards"></a>Block / Unblock Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed technical information, please refer to the below documentation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>“Block a card” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/blockCard">API documentation</a></p>
+</li>
+<li>
+<p>“Unblock a card” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/deleteCardBlock">API documentation</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cards can be blocked either by us or by you, the client. Once blocked, a card can be subsequently unblocked.</p>
+</div>
+<div class="paragraph">
+<p>We reserve the right to block cards according to our Terms and Conditions, which may include instances of fraud attempts or other suspicious activities.</p>
+</div>
+<div class="paragraph">
+<p>You, as the client, have the authority to block cards based on your Terms and Conditions or in response to cardholder requests.</p>
+</div>
+<div class="paragraph">
+<p>When a card is blocked, a card.updated event is triggered to reflect the change in status.</p>
+</div>
+<div class="paragraph">
+<p>This capability to block and unblock cards provides flexibility in managing card security and addressing potential risks. If you have any questions or need assistance with blocking or unblocking cards, our team is available to provide guidance and support. We&#8217;re committed to ensuring the security and integrity of your card management processes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cancelCards"><a class="anchor" href="#cancelCards"></a>Cancel Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Cancel a card” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/cancelCard">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Cards can be canceled either by us or by you, the client. Once canceled, a card cannot be activated again.</p>
+</div>
+<div class="paragraph">
+<p>We reserve the right to cancel cards according to our Terms and Conditions, which may include situations such as cardholder requests, loss, or theft.</p>
+</div>
+<div class="paragraph">
+<p>You, as the client, also have the authority to cancel cards based on your Terms and Conditions or in response to cardholder requests, such as instances of lost or stolen cards.</p>
+</div>
+<div class="paragraph">
+<p>Upon cancellation, a card can no longer be used or activated. This action ensures the security of the cardholder&#8217;s account and prevents unauthorized use of the card.</p>
+</div>
+<div class="paragraph">
+<p>If you have any questions or need assistance with canceling cards, our team is available to provide guidance and support. We&#8217;re committed to ensuring the security and integrity of your card management processes.</p>
+</div>
+<div class="sect2">
+<h3 id="lostStolen"><a class="anchor" href="#lostStolen"></a>Lost / Stolen</h3>
+<div class="paragraph">
+<p>If a card is canceled due to loss or theft, a new card of the same type (physical or virtual) can be automatically generated and requested. By default, when cards are canceled for this reason, a replacement card is automatically ordered; however, this setting can be adjusted in the API or the Qenta Portal if a replacement is unnecessary.</p>
+</div>
+<div class="paragraph">
+<p>If the new card is physical, it will be delivered to the same address as the previous card. You will receive details about the new card through a card-created event. The new card can be linked to the old one through the previousCardId attribute.</p>
+</div>
+<div class="paragraph">
+<p>The process triggers the following events:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>card.updated (old card, status = CANCELLED)</p>
+</li>
+<li>
+<p>card.created (new card, status = NEW)</p>
+</li>
+<li>
+<p>card.updated (new card, status = ORDERED)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This automated process ensures that cardholders are promptly provided with replacement cards in the event of loss or theft, while also maintaining security and continuity of service. If you have any questions or need assistance with managing lost or stolen cards, our team is available to provide support and guidance. We&#8217;re committed to ensuring the security and integrity of your card management processes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changeAuthenticationDetails"><a class="anchor" href="#changeAuthenticationDetails"></a>Change the Authentication Details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Update the cards authentication details” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/patchAuthentication">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>When changing authentication details, it&#8217;s important to note that updating the authentication phone number will also update the phone number used for 3DS (3-D Secure) authentication.</p>
+</div>
+<div class="paragraph">
+<p>This ensures that the authentication process remains accurate and up-to-date, providing enhanced security for card transactions. If you have any questions or need assistance with changing authentication details, our team is available to provide support and guidance. We&#8217;re committed to ensuring the security and integrity of your authentication processes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cardFeatures"><a class="anchor" href="#cardFeatures"></a>Card Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Update the cards features” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/patchFeatures">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>The following card features are implemented:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>ATM Enabled:</strong> This feature allows ATM withdrawals. It can be disabled by setting it to false, blocking ATM withdrawals.</p>
+</li>
+<li>
+<p><strong>NFC Enabled (Tap and Pay, Contactless):</strong> NFC payments are enabled and are on by default. It can be disabled by setting it to false, blocking NFC payments.</p>
+</li>
+<li>
+<p><strong>E-Commerce Enabled:</strong> This feature facilitates online payments, enhancing your platform&#8217;s versatility. It can be toggled on or off, providing control over e-commerce transactions.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>3DS (3D-Secure) Authentication:</strong> This security protocol verifies the identity of cardholders during online transactions, providing an additional layer of protection against fraud. Integrating 3DS makes e-commerce transactions more secure, mitigating the risk of unauthorized use and fraudulent activities.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Digital Wallet Integration:</strong> Digital wallet integration allows users to link their payment cards to digital wallet applications, enabling convenient and secure transactions through mobile devices.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Push Provisioning:</strong> Card programs support Apple Pay, Google Pay, and Samsung Pay and cardholders can follow the standard Apple Wallet, Google Wallet, and Samsung Pay flows to enter their card details and load their cards. Additional steps are needed to enable push provisioning for Apple Pay and Google Pay.</p>
+</li>
+<li>
+<p><strong>Seamless Transactions:</strong> Users can make purchases in-store, online, or within apps by simply tapping their mobile device or using biometric authentication, streamlining the checkout process and eliminating the need to carry physical cards.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Region Restriction:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>No Restriction:</strong> Payments are not blocked due to regional aspects.</p>
+</li>
+<li>
+<p><strong>Region:</strong> Payments with merchants located outside the defined region (EU/EFTA and US) will be blocked.</p>
+</li>
+<li>
+<p><strong>Domestic:</strong> Payments with merchants located outside the issuing country will be blocked.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>These features provide flexibility in controlling card usage and enhancing security based on specific requirements and preferences. If you have any questions or need assistance with configuring card features, our team is available to provide support and guidance. We&#8217;re committed to ensuring the security and integrity of your card management processes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cardLimits"><a class="anchor" href="#cardLimits"></a>Card Limits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Limits are configured based on BIN (Bank Identification Number) requirements and your specific needs. If you require custom limits for your cards by default, please consult your implementation manager.</p>
+</div>
+<div class="paragraph">
+<p>Limit configurations can be divided using the following criteria:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Transaction Category:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ALL:</strong> Applies to any authorization.</p>
+</li>
+<li>
+<p><strong>CASH:</strong> Applies to ATM or cashback authorizations.</p>
+</li>
+<li>
+<p><strong>PURCHASE:</strong> Applies to other authorizations besides cash (including the purchase part of cashback).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>MCC (Merchant Category Code) List:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The limit calculation is restricted to the configured MCC list. If enabled and no list is provided, any MCC will be included in the calculation.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For each limit configuration, the following limits can be defined:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily limit</p>
+</li>
+<li>
+<p>Weekly limit</p>
+</li>
+<li>
+<p>Monthly limit</p>
+</li>
+<li>
+<p>Yearly limit</p>
+</li>
+<li>
+<p>Daily rolling limit</p>
+</li>
+<li>
+<p>Weekly rolling limit</p>
+</li>
+<li>
+<p>Monthly rolling limit</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both normal limits and rolling limits can be configured with the following parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Enabled:</strong> Specifies whether the limit configuration is active or disabled.</p>
+</li>
+<li>
+<p><strong>Max Spending:</strong> Sets the maximum sum of all authorized amounts.</p>
+</li>
+<li>
+<p><strong>Max Transaction Count:</strong> Sets the maximum number of all authorizations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Rolling limits also define the window size. For example, a daily rolling limit with a window size of four will consider the sum of transactions over the last four days, including the present day.</p>
+</div>
+<div class="paragraph">
+<p>This comprehensive approach to limit configuration allows for precise control over card usage and spending, ensuring compliance with regulatory requirements and alignment with your organization&#8217;s specific needs. If you have any questions or require assistance with configuring card limits, our team is available to provide support and guidance. We&#8217;re committed to ensuring the security and integrity of your card management processes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="convertCards"><a class="anchor" href="#convertCards"></a>Convert Cards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Update the cards type” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/patchCardType">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Virtual cards can be converted to physical cards. This conversion process is facilitated using the request object, as physical cards require a mandatory delivery address and support the usage of a PIN.</p>
+</div>
+<div class="paragraph">
+<p>Upon card conversion, a new Card resource is created. The virtual and physical cards will share the same card number and have different CVV and expiry dates if the conversion occurs in a different month than the virtual card creation. If the conversion occurs in the same month, the CVV and expiry dates will be identical.</p>
+</div>
+<div class="paragraph">
+<p>Both the virtual and physical cards will be active and usable by the cardholder with their unique details (CVV and expiry date). Once the physical card is activated, the virtual card will be automatically canceled.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>As both cards share the same card number, certain operations will affect both card resources, including block/unblock, cancel, and change of authentication phone number.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The conversion process triggers the following events:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>card.created (new card, status = NEW)</p>
+</li>
+<li>
+<p>card.updated (new card, status = ORDERED)</p>
+</li>
+<li>
+<p>card.updated (new card, status = ACTIVE, please see <a href="#activateCards">Activate Cards</a>)</p>
+</li>
+<li>
+<p>card.updated (old card, status = CANCELLED)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This conversion functionality provides flexibility for cardholders to transition from virtual to physical cards as needed, while also ensuring seamless management of card resources. If you have any questions or require assistance with card conversion processes, our team is available to provide support and guidance. We&#8217;re committed to ensuring a smooth and efficient card management experience for your organization.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cardImageVisualization"><a class="anchor" href="#cardImageVisualization"></a>Card Image Visualization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We do not host card images ourselves. Please consult your implementation manager regarding the image file to use and host on your system.</p>
+</div>
+<div class="paragraph">
+<p>To display the card image along with the card data we provide, an endpoint is available for fetching the image. This fetch operation should be initiated directly from the cardholder&#8217;s device. The data must not be routed through your system unless you are PCI DSS certified.</p>
+</div>
+<div class="paragraph">
+<p>The fetch operation is unauthenticated and must be initiated from a trusted environment.</p>
+</div>
+<div class="paragraph">
+<p>Our recommended flow is as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The cardholder initiates the process to view the card.</p>
+</li>
+<li>
+<p>You authenticate the cardholder (e.g., through fingerprint).</p>
+</li>
+<li>
+<p>You initiate the call from your backend.</p>
+</li>
+<li>
+<p>The data is fetched on the cardholder&#8217;s device and combined with the card image.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note that card visualizations cannot be created for physical cards configured with a manual activation flow using card details (such as the last four digits) if they have not been activated yet.</p>
+</div>
+<div class="paragraph">
+<p>By following this flow, you can provide cardholders with a seamless and secure experience when viewing their card details. If you have any questions or need further assistance with card image visualization, our team is available to provide support and guidance. We&#8217;re committed to ensuring a smooth and secure experience for both you and your cardholders.</p>
+</div>
+<div class="sect2">
+<h3 id="initiateVisualization"><a class="anchor" href="#initiateVisualization"></a>Initiate a Visualization</h3>
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Creates a card visualization” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/createCardVisualization">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>This operation involves an authenticated backend-to-backend call. It initiates the creation of a One-Time-Code (OTC), which is valid for 15 seconds.</p>
+</div>
+<div class="paragraph">
+<p>The OTC serves as a secure token for initiating the visualization process. It ensures that only authorized parties can access and display the card details.</p>
+</div>
+<div class="paragraph">
+<p>By generating an OTC through this backend-to-backend call, you can facilitate the visualization process securely and seamlessly. If you have any questions or need assistance with initiating a visualization, our team is available to provide support and guidance. We&#8217;re committed to ensuring the security and integrity of your card management processes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fetchCardData"><a class="anchor" href="#fetchCardData"></a>Fetch the Card Data / Show the Image</h3>
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Represents the card data of a card visualization” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/fetchCardData">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>This operation involves an unauthenticated call that must be made from the cardholder&#8217;s device. It requires the use of the same deviceId as used for the initiate call, along with the provided One-Time-Code (OTC) from the initiate call response.</p>
+</div>
+<div class="paragraph">
+<p>The card data fetched through this call should be combined with the card image and displayed to the cardholder.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note the following conditions for a valid fetchCardData call:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The OTC (One-Time-Code) and deviceId must match those provided during the initiate call.</p>
+</li>
+<li>
+<p>The call must be made within 15 seconds of the initiate call.</p>
+</li>
+<li>
+<p>The call must be done the first time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By adhering to these conditions and combining the fetched card data with the card image, you can provide a secure and seamless experience for cardholders when viewing their card details. If you have any questions or need assistance with fetching card data and displaying the card image, our team is available to provide support and guidance. We&#8217;re committed to ensuring a smooth and secure experience for both you and your cardholders.</p>
+</div>
+<div class="sect3">
+<h4 id="cardName"><a class="anchor" href="#cardName"></a>Card Name</h4>
+<div class="paragraph">
+<p>When specifying multi-line card names on your cards, please use '\n' as the line separator. This ensures that the card name is displayed correctly with the appropriate line breaks, enhancing readability and visual appeal.</p>
+</div>
+<div class="paragraph">
+<p>If you have any questions or need further assistance with card naming conventions, our team is available to provide support and guidance. We&#8217;re committed to ensuring that your card designs align with your branding strategy and enhance the overall user experience.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="investigateProblemsResults"><a class="anchor" href="#investigateProblemsResults"></a>Investigate Problems/Results</h3>
+<div class="paragraph">
+<p>For detailed technical information, please refer to the “Represents a card visualization” <a href="https://swagger.qenta.com/baas/#tag/Card/operation/findCardVisualizationById">API documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Use the GET API to observe and track the status of the initiated visualization. This API provides details on whether the visualization was successfully retrieved and the frequency of retrievals.</p>
+</div>
+<div class="paragraph">
+<p>By accessing this API, you can effectively investigate any issues or discrepancies related to the visualization process. It enables you to monitor the success rate and usage patterns of visualizations, allowing you to identify and address any potential problems or concerns.</p>
+</div>
+<div class="paragraph">
+<p>If you encounter any issues or need further clarification on the results obtained from the GET API, our team is available to provide support and guidance. We&#8217;re committed to ensuring that the visualization process operates smoothly and efficiently for both you and your cardholders.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer qenta">
+  <div class="uk-section-secondary uk-section">
+    <div class="uk-container">
+      <div class="tm-grid-expand uk-grid-large uk-grid-margin-large uk-grid" uk-grid="">
+        <div class="uk-width-1-3@m uk-first-column">
+          <div class="uk-position-relative uk-margin" style="left: 0px; bottom: 20px;">
+            <a class="el-link" href="#2" uk-scroll=""><img class="el-image" alt="" uk-img=""
+                src="https://payments.qenta.com/wp-content/uploads/2022/06/RZ-Logo-QENTA-CMYK-invertiert-2.svg" width="120"></a>
+          </div> 
+          <div class="uk-panel uk-text-meta uk-position-relative" style="bottom: 20px;">
+            <p>©2023 - QENTA PAYMENT CEE GMBH</p>
+          </div>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/">COMPANY</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/merchant-login/">MERCHANT LOGIN</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/payment-solutions/">SOLUTIONS</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/contact/">CONTACT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com" target="_blank">ONLINE GUIDES</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/download-center/">DOWNLOAD CENTER</a>
+              </li>
+            </ul>
+          </div>
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/en/imprint/">IMPRINT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com/protection-personal-data/data-protection-en/">DATA PROTECTION</a>
+              </li> 
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/terms-and-conditions/">T&C</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/_/js/site.js"></script>
+<script src="/_/js/vendor/lunr.js"></script>
+<script src="/_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/online-guides/main/card-management/"></script>
+<script async src="/search-index.js"></script>
+<script async src="/_/js/vendor/highlight.js"></script>  </body>
+</html>

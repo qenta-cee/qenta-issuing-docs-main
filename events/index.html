@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Events :: Banking as a Service Guides</title>
+    <link rel="canonical" href="https://guides.qenta.com/online-guides/main/events/">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="/_/css/site.css">
+<link rel="stylesheet" href="/_/css/search.css">
+<link rel="stylesheet" href="/_/css/qenta.css">
+<link rel="stylesheet" href="https://use.typekit.net/ucf2gvc.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/_/css/nav-menu.css">
+<link rel="stylesheet" href="/_/css/tables.css">
+    <script>var uiRootPath = '/_'</script>
+    <link rel="icon" href="/_/img/Favicon-QENTA-RGB.png" type="image/png">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://guides.qenta.com">Banking as a Service Guides</a>
+        <div class="navbar-item search-item">
+          <input id="search-input" type="text" placeholder="Search">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://guides.qenta.com/">Home</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/">Enterprise</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="https://payments.qenta.com/haendler-login/">Merchant Login</a>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://guides.qenta.com/contact/">Contact</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="online-guides" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../">Embedded Finance Guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cardholder-onboarding-process/">Cardholder Onboarding Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../card-management/">Card Management</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="./">Event</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core-concepts/">Core Concepts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/">Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../contact/">Contact</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Embedded Finance Guides</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../">Embedded Finance Guides</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../">Embedded Finance Guides</a></li>
+    <li><a href="./">Event</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Events</h1>
+<div class="sect1">
+<h2 id="events"><a class="anchor" href="#events"></a>Events</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="APIVersioning"><a class="anchor" href="#APIVersioning"></a>API Versioning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Changes to the API result in a new version, following the semantic versioning scheme: <code>MAJOR.MINOR</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>MAJOR:</strong> Increased when incompatible changes are made public.</p>
+</li>
+<li>
+<p><strong>MINOR:</strong> Increased when the API is extended by new features without breaking the existing API, or when API-compatible bug fixes are applied.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Our goal is to ensure that API changes do not break backward compatibility, striving to keep all consumers running smoothly.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note that event messages remain unchanged once created. Subsequent updates to the API (new versions) do not alter existing event messages. Fetching older events using a newer API version also has no impact on the structure of the events. Therefore, older events can be read with a newer API version seamlessly.</p>
+</div>
+<div class="paragraph">
+<p>This approach maintains consistency and reliability in API usage, allowing for smooth transitions between versions while ensuring backward compatibility. If you have any questions or need further clarification on API versioning, our team is available to provide support and guidance. We&#8217;re committed to ensuring a seamless experience for all API consumers.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="deliveryRetries"><a class="anchor" href="#deliveryRetries"></a>Delivery and Retries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Qenta Embedded Finance Platform attempts to deliver your events for up to three days, employing an exponential back-off strategy.</p>
+</div>
+<div class="paragraph">
+<p>In case of missed events or to reconcile data over a specific period, you can utilize the Event resource.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note that events are not rescheduled or retried if no Webhook resource is configured for the event type and is active during creation time.</p>
+</div>
+<div class="paragraph">
+<p>A successful delivery is considered when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your webhook endpoint responds with a 2xx HTTP status code.</p>
+</li>
+<li>
+<p>The response is received within 3 seconds.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By adhering to these guidelines, you can effectively manage event delivery and ensure timely processing of data. If you have any questions or need further assistance with event delivery and retries, our team is available to provide support and guidance. We&#8217;re committed to ensuring the reliability and efficiency of your event processing workflows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="handleDuplicates"><a class="anchor" href="#handleDuplicates"></a>Handle Duplicates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When working with event-driven architectures, it&#8217;s important to account for the possibility of receiving duplicate events. To ensure robustness in your event processing logic, consider implementing the following strategies:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Idempotent Processing:</strong> Design your event processing logic to be idempotent, meaning that processing the same event multiple times has the same effect as processing it once. This can be achieved by assigning unique identifiers to each event and checking whether an event with the same identifier has already been processed.</p>
+</li>
+<li>
+<p><strong>Deduplication:</strong> Maintain a record of processed events and use it to filter out duplicate events before processing. This can be done by storing event identifiers in a database or using an in-memory cache.</p>
+</li>
+<li>
+<p><strong>Sequence Number Checking:</strong> If events are delivered with sequence numbers or timestamps, use them to detect and discard duplicate events based on their order or arrival time.</p>
+</li>
+<li>
+<p><strong>Time Window Deduplication:</strong> Set a time window within which duplicate events are expected to occur and discard duplicates that fall within this window. This approach is useful when events may be delayed or reordered during transmission.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>By implementing these strategies, you can ensure that your event processing system can handle duplicate events effectively, maintaining data integrity and consistency. If you have any questions or need further assistance with handling duplicate events, our team is available to provide support and guidance. We&#8217;re committed to helping you build resilient and reliable event-driven applications.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="orderEvents"><a class="anchor" href="#orderEvents"></a>Order of Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s important to note that we do not guarantee the delivery of events in the order in which they are generated. However, if you ensure that no events are missed, you will receive events in the order they were generated.</p>
+</div>
+<div class="paragraph">
+<p>In case your webhook endpoint does not meet the requirements for successful delivery, we postpone delivery by scheduling a retry with an exponential back-off time. The maximum back-off time is set to 60 minutes. It&#8217;s essential to understand that we do not stop sending events during this time, ensuring that event delivery is resilient and continuous.</p>
+</div>
+<div class="paragraph">
+<p>By acknowledging these aspects of event delivery, you can design your system to handle events effectively and maintain the desired order of processing. If you have any questions or need further clarification on event delivery, our team is available to provide support and guidance. We&#8217;re committed to ensuring the reliability and consistency of your event-driven workflows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="security"><a class="anchor" href="#security"></a>Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To ensure security, an HTTPS endpoint for your webhooks must be provided. We validate the connection to your server, ensuring it&#8217;s correctly set up with a valid server certificate. We require at least TLS v1.2 for encryption to guarantee secure data transmission.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, only events originating from our IP addresses should be trusted, enhancing the security of event transmission and minimizing the risk of unauthorized access.</p>
+</div>
+<div class="paragraph">
+<p>By adhering to these security measures, you can safeguard the integrity and confidentiality of your data exchange with the Qenta Embedded Finance Platform. If you have any questions or need further assistance with ensuring the security of your webhook endpoint, our team is available to provide support and guidance. We&#8217;re committed to protecting your data and maintaining a secure environment for your operations.</p>
+</div>
+<div class="sect2">
+<h3 id="signature"><a class="anchor" href="#signature"></a>Signature</h3>
+<div class="paragraph">
+<p>To validate the content of each request, you&#8217;ll need to follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Retrieve the signature from the HTTP header with the key X-QENTA-SIG.</p>
+</li>
+<li>
+<p>The signature value has the format xq:timestamp:hash.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Example: <code>X-QENTA-SIG=xq:1632827162:17325e0ae016d1af8006bc6c2c86394c468e39031762a3c221f90e4b1ddf3dfa</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Extract the timestamp and hash from the signature.</p>
+</li>
+<li>
+<p>Calculate the hash by taking the request body and appending the timestamp as it is.</p>
+</li>
+<li>
+<p>Hash this string using the HmacSHA256 algorithm.</p>
+</li>
+<li>
+<p>Convert the resulting hash to lowercase for comparison.</p>
+</li>
+<li>
+<p>Compare the calculated hash with the hash extracted from the signature.
+For each request, we create a signature based on the shared secret of your webhook. The signature is found in the HTTP header with key X-QENTA-SIG. The value has the following format: xq:timestamp:hash.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Pseudo-code to generate the hash</div>
+<div class="content">
+<pre>String timestamp = "1632827162"
+String beforeHash = requestBody + timestamp;
+String hash = hmacSha256Digest(beforeHash, sharedSecret);</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eventObject"><a class="anchor" href="#eventObject"></a>Event Object</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Qenta sends you an object with a list of events. The basic object structure of an event is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "events": [
+    {
+      "id": "${event_id}",
+      "eventType": "${event_type}",
+      "apiVersion": "1.0",
+      "paymentProgramId": "${payment_program_id},
+      "createdAt": "2021-09-28T11:06:02Z",
+      "sendingAttemptCount": 2,
+      "lastSendingAttemptAt": "2021-09-28T11:10:02Z",
+      "data": {
+      }
+    }
+  ]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The data field holds the details about the event.</p>
+</div>
+<div class="paragraph">
+<p>On the first delivery attempt, sendingAttemptCount will be set to zero and lastSendingAttemptAt will be null.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="typesEvents"><a class="anchor" href="#typesEvents"></a>Types of Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are the types of events sent by Qenta, along with the corresponding payload objects:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>transaction.authorization:</strong> This event occurs when a transaction is authorized. The data payload holds a Transaction object.</p>
+</li>
+<li>
+<p><strong>transaction.authorization_reversal:</strong> This event occurs when a previously authorized transaction is reversed. The data payload holds a Transaction object.</p>
+</li>
+<li>
+<p><strong>transaction.capture:</strong> This event occurs when a transaction is captured. The data payload holds a Transaction object.</p>
+</li>
+<li>
+<p><strong>transaction.capture_reversal:</strong> This event occurs when a previously captured transaction is reversed. The data payload holds a Transaction object.</p>
+</li>
+<li>
+<p><strong>account.adjustment:</strong> This event occurs when an adjustment is made to an account. The data payload holds an AccountAdjustment object.</p>
+</li>
+<li>
+<p><strong>legal_entity.legal_entity.created:</strong> This event occurs when the verification of a legal entity is completed. The data payload holds a LegalEntityVerificationResult object.</p>
+</li>
+<li>
+<p><strong>legal_entity.verification_result:</strong> This event occurs when the verification of a legal entity is completed. The data payload holds a LegalEntityVerificationResult object.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For detailed information about the payloads and their object structures, you can refer to the provided <a href="https://swagger.qenta.com/baas/">API documentation</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer qenta">
+  <div class="uk-section-secondary uk-section">
+    <div class="uk-container">
+      <div class="tm-grid-expand uk-grid-large uk-grid-margin-large uk-grid" uk-grid="">
+        <div class="uk-width-1-3@m uk-first-column">
+          <div class="uk-position-relative uk-margin" style="left: 0px; bottom: 20px;">
+            <a class="el-link" href="#2" uk-scroll=""><img class="el-image" alt="" uk-img=""
+                src="https://payments.qenta.com/wp-content/uploads/2022/06/RZ-Logo-QENTA-CMYK-invertiert-2.svg" width="120"></a>
+          </div> 
+          <div class="uk-panel uk-text-meta uk-position-relative" style="bottom: 20px;">
+            <p>©2023 - QENTA PAYMENT CEE GMBH</p>
+          </div>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/">COMPANY</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/merchant-login/">MERCHANT LOGIN</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/payment-solutions/">SOLUTIONS</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/contact/">CONTACT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com" target="_blank">ONLINE GUIDES</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/download-center/">DOWNLOAD CENTER</a>
+              </li>
+            </ul>
+          </div>
+          <div class="uk-text-right">
+            <ul class="uk-margin-remove-bottom uk-subnav uk-flex-right" uk-margin="">
+              <li class="el-item uk-first-column">
+                <a class="el-link" href="https://payments.qenta.com/en/imprint/">IMPRINT</a>
+              </li>
+              <li class="el-item">
+                <a class="el-link" href="https://guides.qenta.com/protection-personal-data/data-protection-en/">DATA PROTECTION</a>
+              </li> 
+              <li class="el-item">
+                <a class="el-link" href="https://payments.qenta.com/en/terms-and-conditions/">T&C</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/_/js/site.js"></script>
+<script src="/_/js/vendor/lunr.js"></script>
+<script src="/_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/online-guides/main/events/"></script>
+<script async src="/search-index.js"></script>
+<script async src="/_/js/vendor/highlight.js"></script>  </body>
+</html>
